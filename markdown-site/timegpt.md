@@ -1,3 +1,682 @@
+---
+jupyter: python3
+---
+
+export const quartoRawHtml =
+[`
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>timestamp</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1949-01-01</td>
+      <td>112</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1949-02-01</td>
+      <td>118</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1949-03-01</td>
+      <td>132</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1949-04-01</td>
+      <td>129</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1949-05-01</td>
+      <td>121</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`,`
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>timestamp</th>
+      <th>TimeGPT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1961-01-01</td>
+      <td>437.837921</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1961-02-01</td>
+      <td>426.062714</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1961-03-01</td>
+      <td>463.116547</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1961-04-01</td>
+      <td>478.244507</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1961-05-01</td>
+      <td>505.646484</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`,`
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>timestamp</th>
+      <th>TimeGPT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1961-01-01</td>
+      <td>437.837921</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1961-02-01</td>
+      <td>426.062714</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1961-03-01</td>
+      <td>463.116547</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1961-04-01</td>
+      <td>478.244507</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1961-05-01</td>
+      <td>505.646484</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`,`
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>timestamp</th>
+      <th>TimeGPT</th>
+      <th>TimeGPT-lo-90</th>
+      <th>TimeGPT-lo-80</th>
+      <th>TimeGPT-hi-80</th>
+      <th>TimeGPT-hi-90</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1961-01-01</td>
+      <td>437.837921</td>
+      <td>435.600775</td>
+      <td>435.849347</td>
+      <td>439.826495</td>
+      <td>440.075067</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1961-02-01</td>
+      <td>426.062714</td>
+      <td>415.042877</td>
+      <td>416.267303</td>
+      <td>435.858124</td>
+      <td>437.082550</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1961-03-01</td>
+      <td>463.116547</td>
+      <td>441.402069</td>
+      <td>443.814789</td>
+      <td>482.418304</td>
+      <td>484.831024</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1961-04-01</td>
+      <td>478.244507</td>
+      <td>459.120331</td>
+      <td>461.245239</td>
+      <td>495.243774</td>
+      <td>497.368683</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1961-05-01</td>
+      <td>505.646484</td>
+      <td>497.399377</td>
+      <td>498.315723</td>
+      <td>512.977246</td>
+      <td>513.893591</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`,`
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>unique_id</th>
+      <th>ds</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BE</td>
+      <td>2016-12-01 00:00:00</td>
+      <td>72.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BE</td>
+      <td>2016-12-01 01:00:00</td>
+      <td>65.80</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BE</td>
+      <td>2016-12-01 02:00:00</td>
+      <td>59.99</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BE</td>
+      <td>2016-12-01 03:00:00</td>
+      <td>50.69</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BE</td>
+      <td>2016-12-01 04:00:00</td>
+      <td>52.58</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`,`
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>unique_id</th>
+      <th>ds</th>
+      <th>TimeGPT</th>
+      <th>TimeGPT-lo-90</th>
+      <th>TimeGPT-lo-80</th>
+      <th>TimeGPT-hi-80</th>
+      <th>TimeGPT-hi-90</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BE</td>
+      <td>2016-12-31 00:00:00</td>
+      <td>46.151176</td>
+      <td>41.403194</td>
+      <td>41.930747</td>
+      <td>50.371606</td>
+      <td>50.899159</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BE</td>
+      <td>2016-12-31 01:00:00</td>
+      <td>42.426601</td>
+      <td>34.729466</td>
+      <td>35.584703</td>
+      <td>49.268500</td>
+      <td>50.123737</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BE</td>
+      <td>2016-12-31 02:00:00</td>
+      <td>40.242889</td>
+      <td>34.288178</td>
+      <td>34.949813</td>
+      <td>45.535966</td>
+      <td>46.197601</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BE</td>
+      <td>2016-12-31 03:00:00</td>
+      <td>38.265339</td>
+      <td>32.007584</td>
+      <td>32.702890</td>
+      <td>43.827788</td>
+      <td>44.523094</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BE</td>
+      <td>2016-12-31 04:00:00</td>
+      <td>36.618801</td>
+      <td>28.403707</td>
+      <td>29.316495</td>
+      <td>43.921107</td>
+      <td>44.833895</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`,`
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>unique_id</th>
+      <th>ds</th>
+      <th>y</th>
+      <th>Exogenous1</th>
+      <th>Exogenous2</th>
+      <th>day_0</th>
+      <th>day_1</th>
+      <th>day_2</th>
+      <th>day_3</th>
+      <th>day_4</th>
+      <th>day_5</th>
+      <th>day_6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BE</td>
+      <td>2016-12-01 00:00:00</td>
+      <td>72.00</td>
+      <td>61507.0</td>
+      <td>71066.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BE</td>
+      <td>2016-12-01 01:00:00</td>
+      <td>65.80</td>
+      <td>59528.0</td>
+      <td>67311.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BE</td>
+      <td>2016-12-01 02:00:00</td>
+      <td>59.99</td>
+      <td>58812.0</td>
+      <td>67470.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BE</td>
+      <td>2016-12-01 03:00:00</td>
+      <td>50.69</td>
+      <td>57676.0</td>
+      <td>64529.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BE</td>
+      <td>2016-12-01 04:00:00</td>
+      <td>52.58</td>
+      <td>56804.0</td>
+      <td>62773.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`,`
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>unique_id</th>
+      <th>ds</th>
+      <th>Exogenous1</th>
+      <th>Exogenous2</th>
+      <th>day_0</th>
+      <th>day_1</th>
+      <th>day_2</th>
+      <th>day_3</th>
+      <th>day_4</th>
+      <th>day_5</th>
+      <th>day_6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BE</td>
+      <td>2016-12-31 00:00:00</td>
+      <td>64108.0</td>
+      <td>70318.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BE</td>
+      <td>2016-12-31 01:00:00</td>
+      <td>62492.0</td>
+      <td>67898.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BE</td>
+      <td>2016-12-31 02:00:00</td>
+      <td>61571.0</td>
+      <td>68379.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BE</td>
+      <td>2016-12-31 03:00:00</td>
+      <td>60381.0</td>
+      <td>64972.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BE</td>
+      <td>2016-12-31 04:00:00</td>
+      <td>60298.0</td>
+      <td>62900.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`,`
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>unique_id</th>
+      <th>ds</th>
+      <th>TimeGPT</th>
+      <th>TimeGPT-lo-90</th>
+      <th>TimeGPT-lo-80</th>
+      <th>TimeGPT-hi-80</th>
+      <th>TimeGPT-hi-90</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BE</td>
+      <td>2016-12-31 00:00:00</td>
+      <td>39.264567</td>
+      <td>34.516584</td>
+      <td>35.044138</td>
+      <td>43.484996</td>
+      <td>44.012549</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BE</td>
+      <td>2016-12-31 01:00:00</td>
+      <td>36.569444</td>
+      <td>28.872308</td>
+      <td>29.727546</td>
+      <td>43.411342</td>
+      <td>44.266579</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BE</td>
+      <td>2016-12-31 02:00:00</td>
+      <td>35.609012</td>
+      <td>29.654300</td>
+      <td>30.315935</td>
+      <td>40.902089</td>
+      <td>41.563723</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BE</td>
+      <td>2016-12-31 03:00:00</td>
+      <td>33.714502</td>
+      <td>27.456746</td>
+      <td>28.152053</td>
+      <td>39.276951</td>
+      <td>39.972257</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BE</td>
+      <td>2016-12-31 04:00:00</td>
+      <td>32.577741</td>
+      <td>24.362647</td>
+      <td>25.275436</td>
+      <td>39.880047</td>
+      <td>40.792836</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`];
+
 # TimeGPT {#timegpt}
 
 > Unlock the power of accurate predictions and confidently navigate uncertainty. Reduce uncertainty and resource limitations. With TimeGPT, you can effortlessly access state-of-the-art models to make data-driven decisions. Whether you’re a bank forecasting market trends or a startup predicting product demand, TimeGPT democratizes access to cutting-edge predictive insights, eliminating the need for a dedicated team of machine learning engineers.
@@ -12,24 +691,16 @@ The TimeGPT API provides an interface to this powerful model, allowing users to 
 
 ![figure](./img/timegpt-arch.png)
 
-::: {.cell 0=‘h’ 1=‘i’ 2=‘d’ 3=‘e’}
-
-<details>
-<summary>Code</summary>
+::: {.cell 0=‘h’ 1=‘i’ 2=‘d’ 3=‘e’ execution_count=1}
 
 ``` python
 %load_ext autoreload
 %autoreload 2
 ```
 
-</details>
-
 :::
 
-::: {.cell 0=‘e’ 1=‘x’ 2=‘p’ 3=‘o’ 4=‘r’ 5=‘t’}
-
-<details>
-<summary>Code</summary>
+::: {.cell 0=‘e’ 1=‘x’ 2=‘p’ 3=‘o’ 4=‘r’ 5=‘t’ execution_count=2}
 
 ``` python
 import inspect
@@ -40,14 +711,9 @@ from typing import Dict, List, Optional
 import pandas as pd
 ```
 
-</details>
-
 :::
 
-::: {.cell 0=‘h’ 1=‘i’ 2=‘d’ 3=‘e’}
-
-<details>
-<summary>Code</summary>
+::: {.cell 0=‘h’ 1=‘i’ 2=‘d’ 3=‘e’ execution_count=3}
 
 ``` python
 import logging
@@ -62,14 +728,9 @@ load_dotenv()
 logging.getLogger('statsforecast').setLevel(logging.ERROR)
 ```
 
-</details>
-
 :::
 
-::: {.cell 0=‘e’ 1=‘x’ 2=‘p’ 3=‘o’ 4=‘r’ 5=‘t’ 6=‘i’}
-
-<details>
-<summary>Code</summary>
+::: {.cell 0=‘e’ 1=‘x’ 2=‘p’ 3=‘o’ 4=‘r’ 5=‘t’ 6=‘i’ execution_count=4}
 
 ``` python
 class TimeGPT:
@@ -299,36 +960,41 @@ class TimeGPT:
         return fcst_df
 ```
 
-</details>
-
 :::
 
 ## Usage {#usage}
-
-<details>
-<summary>Code</summary>
 
 ``` python
 show_doc(TimeGPT.__init__, title_level=3, name='TimeGPT')
 ```
 
-</details>
+``` text
+/Users/fedex/miniconda3/envs/nixtlats/lib/python3.10/site-packages/statsforecast/core.py:21: TqdmExperimentalWarning:
+
+Using `tqdm.autonotebook.tqdm` in notebook mode. Use `tqdm.tqdm` instead to force console mode (e.g. in jupyter console)
+```
+
+------------------------------------------------------------------------
+
+### TimeGPT {#timegpt-1}
+
+> ``` text
+>  TimeGPT (token:str)
+> ```
+
+Constructs all the necessary attributes for the TimeGPT object.
+
+|       | **Type** | **Details**                                               |
+|--------|---------------------------|-------------------------------------|
+| token | str      | The authorization token to interact with the TimeGPT API. |
 
 You can instantiate the `TimeGPT` class providing your credentials.
-
-<details>
-<summary>Code</summary>
 
 ``` python
 timegpt = TimeGPT(token=os.environ['TIMEGPT_TOKEN'])
 ```
 
-</details>
-
-::: {.cell 0=‘h’ 1=‘i’ 2=‘d’ 3=‘e’}
-
-<details>
-<summary>Code</summary>
+::: {.cell 0=‘h’ 1=‘i’ 2=‘d’ 3=‘e’ execution_count=7}
 
 ``` python
 # test input_size
@@ -338,84 +1004,102 @@ test_eq(
 )
 ```
 
-</details>
-
 :::
-
-<details>
-<summary>Code</summary>
 
 ``` python
 show_doc(TimeGPT.forecast, title_level=4)
 ```
 
-</details>
+------------------------------------------------------------------------
+
+#### TimeGPT.forecast {#timegpt.forecast}
+
+> ``` text
+>  TimeGPT.forecast (df:pandas.core.frame.DataFrame, h:int, freq:str,
+>                    id_col:str='unique_id', time_col:str='ds',
+>                    target_col:str='y',
+>                    X_df:Optional[pandas.core.frame.DataFrame]=None,
+>                    level:Optional[List[int]]=None, finetune_steps:int=0,
+>                    clean_ex_first:bool=True)
+> ```
+
+Forecast your time series using TimeGPT.
+
+|                | **Type**             | **Default** | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|------|------------------|-------------------------|-------------------------|
+| df             | DataFrame            |             | The DataFrame on which the function will operate. Expected to contain at least the following columns:<br>- time_col:<br> Column name in `df` that contains the time indices of the time series. This is typically a datetime<br> column with regular intervals, e.g., hourly, daily, monthly data points.<br>- target_col:<br> Column name in `df` that contains the target variable of the time series, i.e., the variable we <br> wish to predict or analyze.<br>Additionally, you can pass multiple time series (stacked in the dataframe) considering an additional column:<br>- id_col:<br> Column name in `df` that identifies unique time series. Each unique value in this column<br> corresponds to a unique time series. |
+| h              | int                  |             | Forecast horizon.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| freq           | str                  |             | Frequency of the data.<br>See [pandas’ available frequencies](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| id_col         | str                  | unique_id   | Column that identifies each serie.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| time_col       | str                  | ds          | Column that identifies each timestep, its values can be timestamps or integers.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| target_col     | str                  | y           | Column that contains the target.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| X_df           | Optional             | None        | DataFrame with \[`unique_id`, `ds`\] columns and `df`’s future exogenous.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| level          | Optional             | None        | Confidence levels between 0 and 100 for prediction intervals.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| finetune_steps | int                  | 0           | Number of steps used to finetune TimeGPT in the<br>new data.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| clean_ex_first | bool                 | True        | Clean exogenous signal before making forecasts<br>using TimeGPT.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Returns**    | **pandas.DataFrame** |             | **DataFrame with TimeGPT forecasts for point predictions and probabilistic<br>predictions (if level is not None).**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 Now you can start to make forecasts! Let’s import an example:
-
-<details>
-<summary>Code</summary>
 
 ``` python
 df = pd.read_csv('https://raw.githubusercontent.com/Nixtla/transfer-learning-time-series/main/datasets/air_passengers.csv')
 df.head()
 ```
 
-</details>
+<div dangerouslySetInnerHTML={{ __html: quartoRawHtml[0] }} />
 
 Let’s plot this series
-
-<details>
-<summary>Code</summary>
 
 ``` python
 df.set_index('timestamp').plot(figsize=(20, 10))
 ```
 
-</details>
+``` text
+<Axes: xlabel='timestamp'>
+```
+
+![](timegpt_files/figure-markdown_strict/cell-11-output-2.png)
 
 Now we can forecast this dataset. We observe that this dataset has monthly frequency. We have to pass the right pandas frequency to `TimeGPT` to have the right forecasts. In this case ‘MS’. Let’s forecast the next 12 observations. In this case we also have to define:
 
 -   `time_col`: Column that identifies the datestamp column.
 -   `target_col`: The variable that we want to forecast.
 
-<details>
-<summary>Code</summary>
-
 ``` python
 timegpt_fcst_df = timegpt.forecast(df=df, h=12, freq='MS', time_col='timestamp', target_col='value')
 timegpt_fcst_df.head()
 ```
 
-</details>
-<details>
-<summary>Code</summary>
+<div dangerouslySetInnerHTML={{ __html: quartoRawHtml[1] }} />
 
 ``` python
 pd.concat([df, timegpt_fcst_df]).set_index('timestamp').plot(figsize=(20, 10))
 ```
 
-</details>
+``` text
+<Axes: xlabel='timestamp'>
+```
+
+![](timegpt_files/figure-markdown_strict/cell-13-output-2.png)
 
 You can also produce a larger forecast horizon:
-
-<details>
-<summary>Code</summary>
 
 ``` python
 timegpt_fcst_df = timegpt.forecast(df=df, h=36, freq='MS', time_col='timestamp', target_col='value')
 timegpt_fcst_df.head()
 ```
 
-</details>
-<details>
-<summary>Code</summary>
+<div dangerouslySetInnerHTML={{ __html: quartoRawHtml[2] }} />
 
 ``` python
 pd.concat([df, timegpt_fcst_df]).set_index('timestamp').plot(figsize=(20, 10))
 ```
 
-</details>
+``` text
+<Axes: xlabel='timestamp'>
+```
+
+![](timegpt_files/figure-markdown_strict/cell-15-output-2.png)
 
 ### Prediction Intervals {#prediction-intervals}
 
@@ -427,9 +1111,6 @@ When using TimeGPT for time series forecasting, you have the option to set the l
 
 Here’s how you could do it:
 
-<details>
-<summary>Code</summary>
-
 ``` python
 timegpt_fcst_pred_int_df = timegpt.forecast(
     df=df, h=12, freq='MS', level=[80, 90], 
@@ -438,17 +1119,11 @@ timegpt_fcst_pred_int_df = timegpt.forecast(
 timegpt_fcst_pred_int_df.head()
 ```
 
-</details>
-<details>
-<summary>Code</summary>
+<div dangerouslySetInnerHTML={{ __html: quartoRawHtml[3] }} />
 
 ``` python
 import matplotlib.pyplot as plt
 ```
-
-</details>
-<details>
-<summary>Code</summary>
 
 ``` python
 history_with_fcst_df = pd.concat([df, timegpt_fcst_pred_int_df])
@@ -466,7 +1141,7 @@ plt.legend()
 plt.show()
 ```
 
-</details>
+![](timegpt_files/figure-markdown_strict/cell-18-output-1.png)
 
 It’s essential to note that the choice of prediction interval level depends on your specific use case. For high-stakes predictions, you might want a wider interval to account for more uncertainty. For less critical forecasts, a narrower interval might be acceptable.
 
@@ -478,9 +1153,6 @@ In TimeGPT, you can use the `finetune_steps` argument to specify the number of a
 
 Here’s an example of how to fine-tune TimeGPT:
 
-<details>
-<summary>Code</summary>
-
 ``` python
 timegpt_fcst_finetune_df = timegpt.forecast(
     df=df, h=12, freq='MS', finetune_steps=10,
@@ -488,15 +1160,15 @@ timegpt_fcst_finetune_df = timegpt.forecast(
 )
 ```
 
-</details>
-<details>
-<summary>Code</summary>
-
 ``` python
 pd.concat([df, timegpt_fcst_finetune_df]).set_index('timestamp').plot(figsize=(20, 10))
 ```
 
-</details>
+``` text
+<Axes: xlabel='timestamp'>
+```
+
+![](timegpt_files/figure-markdown_strict/cell-20-output-2.png)
 
 In this code, `finetune_steps: 10` means the model will go through 10 iterations of training on your time series data.
 
@@ -510,54 +1182,39 @@ TimeGPT provides a robust solution for multi-series forecasting, which involves 
 
 The following dataset contains prices of different electricity markets. Let see how can we forecast them.
 
-<details>
-<summary>Code</summary>
-
 ``` python
 df = pd.read_csv('https://raw.githubusercontent.com/Nixtla/transfer-learning-time-series/main/datasets/electricity-short.csv')
 df.head()
 ```
 
-</details>
+<div dangerouslySetInnerHTML={{ __html: quartoRawHtml[4] }} />
 
 Let’s plot this series using [`StatsForecast`](https://github.com/Nixtla/statsforecast):
-
-<details>
-<summary>Code</summary>
 
 ``` python
 from statsforecast import StatsForecast as sf
 ```
 
-</details>
-<details>
-<summary>Code</summary>
-
 ``` python
 sf.plot(df, engine='matplotlib')
 ```
 
-</details>
+![](timegpt_files/figure-markdown_strict/cell-23-output-1.png)
 
 We just have to pass the dataframe to create forecasts for all the time series at once.
-
-<details>
-<summary>Code</summary>
 
 ``` python
 timegpt_fcst_multiseries_df = timegpt.forecast(df=df, h=24, freq='H', level=[80, 90])
 timegpt_fcst_multiseries_df.head()
 ```
 
-</details>
-<details>
-<summary>Code</summary>
+<div dangerouslySetInnerHTML={{ __html: quartoRawHtml[5] }} />
 
 ``` python
 sf.plot(df, timegpt_fcst_multiseries_df, max_insample_length=365, level=[80, 90], engine='matplotlib')
 ```
 
-</details>
+![](timegpt_files/figure-markdown_strict/cell-25-output-1.png)
 
 ### Exogenous variables {#exogenous-variables}
 
@@ -569,55 +1226,45 @@ To incorporate exogenous variables in TimeGPT, you’ll need to pair each point 
 
 Let’s see an example.
 
-<details>
-<summary>Code</summary>
-
 ``` python
 df = pd.read_csv('https://raw.githubusercontent.com/Nixtla/transfer-learning-time-series/main/datasets/electricity-short-with-ex-vars.csv')
 df.head()
 ```
 
-</details>
+<div dangerouslySetInnerHTML={{ __html: quartoRawHtml[6] }} />
 
 To produce forecasts we have to add the future values of the exogenous variables. Let’s read this dataset. In this case we want to predict 24 steps ahead, therefore each unique id will have 24 observations.
-
-<details>
-<summary>Code</summary>
 
 ``` python
 future_ex_vars_df = pd.read_csv('https://raw.githubusercontent.com/Nixtla/transfer-learning-time-series/main/datasets/electricity-short-future-ex-vars.csv')
 future_ex_vars_df.head()
 ```
 
-</details>
+<div dangerouslySetInnerHTML={{ __html: quartoRawHtml[7] }} />
 
 Let’s call the `forecast` method, adding this information:
-
-<details>
-<summary>Code</summary>
 
 ``` python
 timegpt_fcst_ex_vars_df = timegpt.forecast(df=df, X_df=future_ex_vars_df, h=24, freq='H', level=[80, 90])
 timegpt_fcst_ex_vars_df.head()
 ```
 
-</details>
-<details>
-<summary>Code</summary>
+<div dangerouslySetInnerHTML={{ __html: quartoRawHtml[8] }} />
 
 ``` python
 sf.plot(df[['unique_id', 'ds', 'y']], timegpt_fcst_ex_vars_df, max_insample_length=365, level=[80, 90], engine='matplotlib')
 ```
 
-</details>
+![](timegpt_files/figure-markdown_strict/cell-29-output-1.png)
 
 We also can get the importance of the features.
-
-<details>
-<summary>Code</summary>
 
 ``` python
 timegpt.weights_x.plot.barh(x='features', y='weights')
 ```
 
-</details>
+``` text
+<Axes: ylabel='features'>
+```
+
+![](timegpt_files/figure-markdown_strict/cell-30-output-2.png)

@@ -39,9 +39,6 @@ Just import the library, set your credentials, and start forecasting in two line
 
 ::: {.cell 0=‘h’ 1=‘i’ 2=‘d’ 3=‘e’}
 
-<details>
-<summary>Code</summary>
-
 ``` python
 import os
 
@@ -51,8 +48,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 ```
-
-</details>
 
 ``` text
 /Users/fedex/miniconda3/envs/nixtlats/lib/python3.10/site-packages/statsforecast/core.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
@@ -67,19 +62,11 @@ True
 
 ::: {.cell 0=‘h’ 1=‘i’ 2=‘d’ 3=‘e’}
 
-<details>
-<summary>Code</summary>
-
 ``` python
 df = pd.read_csv('https://raw.githubusercontent.com/Nixtla/transfer-learning-time-series/main/datasets/electricity-short.csv')
 ```
 
-</details>
-
 :::
-
-<details>
-<summary>Code</summary>
 
 ``` python
 from nixtlats import TimeGPT
@@ -87,15 +74,10 @@ timegpt = TimeGPT(token=os.environ['TIMEGPT_TOKEN'])
 fcst_df = timegpt.forecast(df, h=24, freq='H', level=[80, 90])
 ```
 
-</details>
-<details>
-<summary>Code</summary>
-
 ``` python
 sf.plot(df, fcst_df, level=[80, 90], max_insample_length=24 * 5)
 ```
 
-</details>
 <div dangerouslySetInnerHTML={{ __html: quartoRawHtml[0] }} />
 
 ![](index_files/figure-markdown_strict/cell-5-output-2.png)
