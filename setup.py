@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf8") as fh:
 
 setuptools.setup(
     name="nixtlats",
-    version="0.1.0",
+    version="0.1.3",
     description="Nixtla SDK",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -18,5 +18,5 @@ setuptools.setup(
     ],
     python_requires=">=3.7",
     install_requires=["requests", "pandas"],
-    extras_require={"dev": ["nbdev", "plotly", "python-dotenv", "statsforecast"]},
+    extras_require={"dev": ["nbdev", "plotly", "python-dotenv", "openbb", "statsforecast"]},
 )
